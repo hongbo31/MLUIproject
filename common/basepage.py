@@ -54,7 +54,13 @@ class BasePage:
 if __name__ == '__main__':
     page = BasePage()
    # page.driver.open_browser("http://www.multilotto.com/en")
-  #  page.driver.find_element("首页弹窗确认").click()
-    page.link_page("首页登录按钮", False)
+    #  page.driver.find_element("首页弹窗确认").click()
+    page.link_page("http://support.huawei.com/iknow/")
+    page.driver.driver.switch_to_frame(0)
+    page.driver.driver.switch_to_frame("hwIframe2")
+    page.driver.driver.switch_to_frame(0)
+    page.driver.find_element("access").click()
+
+
 
 

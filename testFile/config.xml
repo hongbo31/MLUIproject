@@ -45,4 +45,20 @@
         <pathType>xpath</pathType>
         <pathValue>.//*[@id='wrapper']/div[2]/div[2]/div[2]/div[7]</pathValue>
     </element>
+    <element page = "huawei">
+        <name>EnterpriseNetwork</name>
+        <pathType>id</pathType>
+        <pathValue>ProductCategories</pathValue>
+    </element>
+    <element page = "huawei">
+        <name>access</name>
+        <pathType>linktext</pathType>
+        <pathValue>Access</pathValue>
+    </element>
+    <element page = "huawei">
+        <name>enter</name>
+        <pathType>id</pathType>
+        <pathValue>datacom</pathValue>
+    </element>
+
 </page>

@@ -67,7 +67,7 @@ class Drive:
             return self.driver.find_elements_by_css_selector(pathValue)
         elif pathType == 'xpath':
             return self.driver.find_elements_by_xpath(pathValue)
-        elif pathType == 'link_text':
+        elif pathType == 'linktext':
             return self.driver.find_elements_by_link_text(pathValue)
         elif pathType == 'tag_name':
             return self.driver.find_elements_by_tag_name(pathValue)
@@ -103,16 +103,13 @@ class Drive:
         self.driver.back()
 if __name__ == '__main__':
     dr = Drive(1)
-    dr.open_browser('http://www.multilotto.com/en')
+    dr.open_browser('http://support.huawei.com/iknow/')
   #  dr.open_browser("https://www.baidu.com", False)
     time.sleep(2)
-    #dr.find_element("百度搜索输入框").send_keys("haha")
-    print(dr.is_alter_present())
-    dr.find_element("首页弹窗确认").click()
-    time.sleep(10)
-    print(dr.is_alter_present())
-    dr.find_element("首页图标").click()
-    #dr.close_brwser()
 
-    moreelem = dr.find_elements(父类元素)
-    print(moreelem)
+    #dr.find_element("百度搜索输入框").send_keys("haha")
+    dr.driver.switch_to_frame(0)
+    dr.driver.switch_to_frame("hwIframe2")
+    dr.driver.switch_to_frame(0)
+    print((dr.find_elements("access")))
+    print(dr.find_elements("enter"))
