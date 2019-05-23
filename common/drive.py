@@ -15,8 +15,9 @@ class Drive:
             self.driver = webdriver.Ie()
         self.action = ActionChains(self.driver)
 
-    def open_browser(self, url):
-        #self.driver.maximize_window()
+    def open_browser(self, url, needmanxwindow=True):
+        if needmanxwindow:
+            self.driver.maximize_window()
         self.driver.get(url)
         return self.driver
 
@@ -103,6 +104,7 @@ class Drive:
 if __name__ == '__main__':
     dr = Drive(1)
     dr.open_browser('http://www.multilotto.com/en')
+  #  dr.open_browser("https://www.baidu.com", False)
     time.sleep(2)
     #dr.find_element("百度搜索输入框").send_keys("haha")
     print(dr.is_alter_present())
@@ -111,3 +113,6 @@ if __name__ == '__main__':
     print(dr.is_alter_present())
     dr.find_element("首页图标").click()
     #dr.close_brwser()
+
+    moreelem = dr.find_elements(父类元素)
+    print(moreelem)

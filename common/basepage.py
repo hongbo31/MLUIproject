@@ -8,8 +8,8 @@ class BasePage:
         self.driver = Drive(web)
 
     # 进入页面，传入url地址
-    def link_page(self, url):
-        self.driver.open_browser(url)
+    def link_page(self, url, needmaxwindow=True):
+        self.driver.open_browser(url, needmaxwindow)
 
     # 页面前进
     def forward_page(self):
@@ -47,11 +47,14 @@ class BasePage:
     def close_age_alert(self):
         self.driver.find_element("首页年龄弹窗确认").click()
 
+    def close_current_page(self):
+        self.driver.close_browser()
+
 
 if __name__ == '__main__':
     page = BasePage()
-    page.driver.open_browser("http://www.multilotto.com/en")
-    page.driver.find_element("首页弹窗确认").click()
-    page.link_page("首页登录按钮")
+   # page.driver.open_browser("http://www.multilotto.com/en")
+  #  page.driver.find_element("首页弹窗确认").click()
+    page.link_page("首页登录按钮", False)
 
 

@@ -5,10 +5,9 @@ from common.log import Log
 
 class LoginPage(BasePage):
 
-    def link_home_page(self, website='com'):
+    def link_login_page(self, website='com'):
         if website.upper() == 'COM':
             self.link_page("https://www.multilotto.com/en/user/signin")
-            self.driver.maximize_window()
         elif website.upper() == 'NET':
             self.link_page("https://www.multilotto.net/en/user/signin")
         elif website.upper() == "IE":
@@ -29,17 +28,17 @@ class LoginPage(BasePage):
         current_title = self.get_current_title()
         current_url = self.get_current_url()
         if ("user/dashboard" or "user/deposit/") in current_url and "Online Lottery" in current_title:
+            Log().info("登录成功，当前的地址为：" + current_url)
             return True
         Log().error("登录失败，请检查")
         return False
 
 
 if __name__ == '__main__':
-
     lp = LoginPage()
-    lp.link_home_page()
-    lp.driver.maximize_window()
+    lp.link_login_page()
     lp.close_age_alert()
-    lp.login("cai.wenjuan+test4@themultigroup.com", "MMMmmm1500")
+    lp.login("cai.wenjuan+test4@themultigroup.com", "MMMmmm500")
     time.sleep(10)
     print(lp.is_login_sucess())
+    lp.close_current_page()
