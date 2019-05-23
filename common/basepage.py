@@ -9,8 +9,7 @@ class BasePage:
 
     # 进入页面，传入url地址
     def link_page(self, url):
-        self.driver.driver.get(url)
-        # self.driver.find_element(page_name).click()
+        self.driver.open_browser(url)
 
     # 页面前进
     def forward_page(self):
@@ -47,6 +46,7 @@ class BasePage:
     # 首页出现18岁年龄确认弹窗，关闭弹窗
     def close_age_alert(self):
         self.driver.find_element("首页年龄弹窗确认").click()
+
 
 if __name__ == '__main__':
     page = BasePage()

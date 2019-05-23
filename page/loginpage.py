@@ -8,6 +8,7 @@ class LoginPage(BasePage):
     def link_home_page(self, website='com'):
         if website.upper() == 'COM':
             self.link_page("https://www.multilotto.com/en/user/signin")
+            self.driver.maximize_window()
         elif website.upper() == 'NET':
             self.link_page("https://www.multilotto.net/en/user/signin")
         elif website.upper() == "IE":
@@ -33,10 +34,12 @@ class LoginPage(BasePage):
         return False
 
 
-lp = LoginPage()
-lp.link_home_page()
-lp.driver.maximize_window()
-lp.close_age_alert()
-lp.login("cai.wenjuan+test4@themultigroup.com", "MMMmmm1500")
-time.sleep(10)
-print(lp.is_login_sucess())
+if __name__ == '__main__':
+
+    lp = LoginPage()
+    lp.link_home_page()
+    lp.driver.maximize_window()
+    lp.close_age_alert()
+    lp.login("cai.wenjuan+test4@themultigroup.com", "MMMmmm1500")
+    time.sleep(10)
+    print(lp.is_login_sucess())

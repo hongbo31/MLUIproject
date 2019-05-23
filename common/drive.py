@@ -16,12 +16,13 @@ class Drive:
         self.action = ActionChains(self.driver)
 
     def open_browser(self, url):
+        self.driver.maximize_window()
         self.driver.get(url)
         return self.driver
 
-    def maximize_window(self):
-        self.driver.maximize_window()
-        return self.driver
+    # def maximize_window(self):
+    #     self.driver.maximize_window()
+    #     return self.driver
 
     def getwindow_size(self):
         self.driver.get_window_size()
