@@ -16,7 +16,7 @@ class Drive:
         self.action = ActionChains(self.driver)
 
     def open_browser(self, url):
-        self.driver.maximize_window()
+        #self.driver.maximize_window()
         self.driver.get(url)
         return self.driver
 
