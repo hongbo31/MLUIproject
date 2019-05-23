@@ -1,10 +1,12 @@
 import xml.etree.cElementTree as ET
+from common.getfilepath import get_path
+import os
 
 
 class ElementsRead:
 
     def __init__(self):
-        xml_file_path = 'C:\\Users\\monitor\\PycharmProjects\\UIAuto\\testFile\\config.xml'  # 文件路径
+        xml_file_path = os.path.join(get_path(), '../testFile/config.xml')  # 文件路径, 在当前目录下的上一层路径的/testFile文件下面
         self.tree = ET.parse(xml_file_path)
         self.root = self.tree.getroot()
 
