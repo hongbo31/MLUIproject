@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+    <element>
+        <name>百度搜索输入框</name>
+        <pathType>id</pathType>
+        <pathValue>kw</pathValue>
+    </element>
+    <element page = "首页">
+        <name>首页图标</name>
+        <pathType>class_name</pathType>
+        <pathValue>logo-cont</pathValue>
+    </element>
+    <element page = "首页">
+        <name>首页弹窗</name>
+        <pathType>xpath</pathType>
+        <pathValue>.//*[@id='modal']</pathValue>
+    </element>
+    <element page = "首页">
+        <name>首页年龄弹窗确认</name>
+        <pathType>xpath</pathType>
+        <pathValue>.//*[@id='modal']/div[2]/a</pathValue>
+    </element>
+    <element page ="首页">
+        <name>首页signin按钮</name>
+        <pathType>class_name</pathType>
+        <pathValue>go-login</pathValue>
+    </element>
+    <element page ="首页">
+        <name>首页signup按钮</name>
+        <pathType>class_name</pathType>
+        <pathValue>go-sign</pathValue>
+    </element>
+    <element page ="登录页">
+        <name>用户名输入框</name>
+        <pathType>name</pathType>
+        <pathValue>email</pathValue>
+    </element>
+    <element page = "登录页">
+        <name>密码输入框</name>
+        <pathType>name</pathType>
+        <pathValue>password</pathValue>
+    </element>
+     <element page = "登录页">
+        <name>登录提交按钮</name>
+        <pathType>xpath</pathType>
+        <pathValue>.//*[@id='wrapper']/div[2]/div[2]/div[2]/div[7]</pathValue>
+    </element>
+</page>
