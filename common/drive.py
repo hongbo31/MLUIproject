@@ -109,7 +109,10 @@ if __name__ == '__main__':
 
     #dr.find_element("百度搜索输入框").send_keys("haha")
     dr.driver.switch_to_frame(0)
+    dr.driver.switch_to.frame(0)
     dr.driver.switch_to_frame("hwIframe2")
     dr.driver.switch_to_frame(0)
-    print((dr.find_elements("access")))
-    print(dr.find_elements("enter"))
+    (dr.find_element("access")).click()
+    # print(dr.find_elements("enter"))
+    time.sleep(20)
+    dr.close_browser()

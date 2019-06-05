@@ -52,8 +52,8 @@
     </element>
     <element page = "huawei">
         <name>access</name>
-        <pathType>linktext</pathType>
-        <pathValue>Access</pathValue>
+        <pathType>xpath</pathType>
+        <pathValue>.//*[@id='datacom']/a[1]</pathValue>
     </element>
     <element page = "huawei">
         <name>enter</name>
